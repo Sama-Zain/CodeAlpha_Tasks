@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c92981;
+}
+.container {
+  max-width: 300px;
+  background: #1c1c52;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 3px 10px rgba(0,0,0,0.5);
+}
+.input {
+  width: 100%;
+  height: 70px;
+  font-size: 28px;
+  text-align: right;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 10px;
+  background: #eee;
+}
+.button {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.button button {
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #f0f0f0;
+  transition: 0.2s;
+}
+.button button:hover {
+  background: #ddd;
+  transform: translateY(-2px);
+}
+.button button:active {
+  transform: scale(0.95);
+}
+.ac, .del, .opertioneq {
+  background: yellow;
+  color: purple;
+}
+.opertion {
+  color: #e70782;
+}
+.realtime {
+  margin-top: 10px;
+  text-align: right;
+  color: #fff;
+  font-size: 18px;
+  min-height: 24px;
+}
+.realtime span {
+  color: #ffeb3b;
+}   
+@media (max-width: 400px) {
+  .container {
+    max-width: 90%;
+  }
+  .input {
+    height: 60px;
+    font-size: 24px;
+  }
+  .button button {
+    padding: 12px;
+    font-size: 18px;
+  }
+}
+.button .zero {
+  grid-column: span 2;
+}
+.button .equal {
+  grid-column: span 2;
+}
+.button .equal.opertioneq {
+  background: #e70782;
+  color: #fff;
+}
+.button .equal.opertioneq:hover {
+  background: #c6006f;
+}
+.button .equal.opertioneq:active {
+  background: #a5005a;
+}
+.button .ac {
+  background: #ffeb3b;
+  color: purple;
+}
+.button .ac:hover {
+  background: #f4e036;
+}
+.button .ac:active {
+  background: #d6c72e;
+}
+.button .del {
+  background: #ffeb3b;
+  color: purple;
+}
+.button .del:hover {
+  background: #f4e036;
+}
+.button .del:active {
+  background: #d6c72e;
+}
+.button .opertion {
+  background: #e70782;
+  color: #fff;
+}
+.button .opertion:hover {
+  background: #c6006f;
+}
+.button .opertion:active {
+  background: #a5005a;
+}

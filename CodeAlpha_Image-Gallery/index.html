@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Gallery — Responsive Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="title">Image Gallery</div>
+    <div class="controls">
+      <div class="btn" id="show-all">All</div>
+      <div class="btn" data-filter="nature">Nature</div>
+      <div class="btn" data-filter="city">City</div>
+      <div class="btn" data-filter="people">People</div>
+      <div style="width:8px"></div>
+      <div class="btn" id="toggle-grayscale">Enable/Disable Filter</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar">
+      <div>Select a category to display images, or click to open.</div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <label style="font-size:13px;color:var(--muted)">Easy View</label>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <!-- Cards -->
+      <article class="card" tabindex="0" data-category="nature" data-full="https://picsum.photos/id/1018/1200/800" data-title="Mountain Sunset" data-desc="Aerial view of a breathtaking sunset over the mountain">
+        <img loading="lazy" src="https://picsum.photos/id/1018/600/400" alt="Mountain Sunset">
+        <div class="meta"><h4>Mountain Sunset</h4><p>Nature</p></div>
+      </article>
+
+      <article class="card" tabindex="0" data-category="city" data-full="https://picsum.photos/id/1011/1200/800" data-title="City Night Street" data-desc="Busy city street filled with lights">
+        <img loading="lazy" src="https://picsum.photos/id/1011/600/400" alt="City Night Street">
+        <div class="meta"><h4>City Street</h4><p>City</p></div>
+      </article>
+
+      <article class="card" tabindex="0" data-category="people" data-full="https://picsum.photos/id/1005/1200/800" data-title="Portrait" data-desc="Warm-colored portrait">
+        <img loading="lazy" src="https://picsum.photos/id/1005/600/400" alt="Portrait">
+        <div class="meta"><h4>Portrait</h4><p>People</p></div>
+      </article>
+
+      <article class="card" tabindex="0" data-category="nature" data-full="https://picsum.photos/id/1020/1200/800" data-title="Calm Lake" data-desc="Reflection of the sky on clear water">
+        <img loading="lazy" src="https://picsum.photos/id/1020/600/400" alt="Calm Lake">
+        <div class="meta"><h4>Calm Lake</h4><p>Nature</p></div>
+      </article>
+
+      <article class="card" tabindex="0" data-category="city" data-full="https://picsum.photos/id/1015/1200/800" data-title="City Bridge" data-desc="Historic architectural bridge">
+        <img loading="lazy" src="https://picsum.photos/id/1015/600/400" alt="City Bridge">
+        <div class="meta"><h4>City Bridge</h4><p>City</p></div>
+      </article>
+
+      <article class="card" tabindex="0" data-category="people" data-full="https://picsum.photos/id/1027/1200/800" data-title="Daily Life" data-desc="A snapshot of daily street life">
+        <img loading="lazy" src="https://picsum.photos/id/1027/600/400" alt="Daily Life">
+        <div class="meta"><h4>Daily Life</h4><p>People</p></div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>Completed: Interactive Image Gallery — includes filtering, lightbox, and navigation.</footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-hidden="true">
+    <button class="nav-btn left" id="prevBtn">◀</button>
+    <div class="lightbox-content">
+      <div class="lb-image"><img id="lbImg" src="" alt=""></div>
+      <aside class="lb-side">
+        <h3 id="lbTitle">Title</h3>
+        <p id="lbDesc">Description</p>
+        <div class="lb-actions">
+          <button class="icon-btn" id="downloadBtn">Download</button>
+          <button class="icon-btn" id="closeBtn">Close</button>
+        </div>
+      </aside>
+    </div>
+    <button class="nav-btn right" id="nextBtn">▶</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

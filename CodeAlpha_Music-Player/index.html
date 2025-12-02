@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Player</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="player-container">
+
+    <div class="current-song">
+        <div class="song-info">
+            <h3 id="song-title">Select a song</h3>
+            <p id="song-artist">Artist Name</p>
+        </div>
+    </div>
+
+    <!-- عنصر الصوت -->
+    <audio id="audio"></audio>
+
+    <!-- الأزرار -->
+    <div class="controls">
+        <button id="prev">⏮️</button>
+        <button id="play">▶️</button>
+        <button id="next">⏭️</button>
+
+        <!-- الصوت -->
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+    </div>
+
+    <!-- وقت الأغنية -->
+    <div class="progress-container">
+        <span id="current-time">00:00</span>
+
+        <input type="range" id="progress" value="0" step="0.1">
+
+        <span id="duration">00:00</span>
+    </div>
+
+    <ul class="playlist" id="playlist">
+    <li data-src="songs/Alone_-_Color_Out.mp3"
+        data-title="Alone"
+        data-artist="Color Out">
+        Alone - Color Out
+    </li>
+
+    <li data-src="songs/Color_Out_-_Host.mp3"
+        data-title="Host"
+        data-artist="Color Out">
+        Host - Color Out
+    </li>
+
+    <li data-src="songs/Ali_Mills_-_Canyon.mp3"
+        data-title="Canyon"
+        data-artist="Ali Mills">
+        Canyon - Ali Mills
+    </li>
+    <li data-src="songs/Fat_City_Reprise_-_Cool_Cat.mp3"
+        data-title="Cool Cat"
+        data-artist="Fat City Reprise">
+            Cool Cat - Fat City Reprise
+    </li>
+    <li data-src="songs/The_Sean_Moon_Band_-_Out_Here.mp3"
+        data-title="Out Here"
+        data-artist="Tha Sean Moon Band">
+        Out Here - Tha Sean Moon Band 
+    </li>
+
+</ul>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
